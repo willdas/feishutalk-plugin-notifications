@@ -1,0 +1,18 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <f:entry title="jenkins URL" field="jenkinsURL">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="飞书机器人地址" field="url">
+    <f:textbox />
+  </f:entry>
+  <f:entry title="在开始构建时通知">
+      <f:checkbox name="onStart" checked="true"/><!--checked="${instance.isOnStart()}"-->
+  </f:entry>
+  <f:entry title="构建成功后通知">
+      <f:checkbox name="onSuccess" checked="true"/><!--checked="${instance.isOnSuccess()}"-->
+  </f:entry>
+  <f:entry title="构建失败后通知">
+      <f:checkbox name="onFailed" checked="true"/><!--checked="${instance.isOnFailed()}"-->
+  </f:entry>
+</j:jelly>
